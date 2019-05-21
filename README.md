@@ -17,3 +17,13 @@
 
 + FirstMapReduce
   + 了解Mapper 和 Reducer 的函数构造，配置基本的job属性
+
++ state1
+  + Mapper+Reducer基本数据统计
+
++ state2
+  + Mapper+Combiner+Reducer基本数据统计 
+  
+
++ state3
+  + Mappeer+Partitioner+Reducer基本数据统计
