@@ -27,7 +27,7 @@ switch(key.toString().split("#")[1]) {
 		case "Sum":
 			for (LongWritable c : values) {
 			Sum += Long.valueOf(c.toString());
-			
+			counter += 1;
 			}
 			break;
 			
@@ -50,7 +50,7 @@ switch(key.toString().split("#")[1]) {
 		case "Aver":
 			for(LongWritable c:values) {
 				Aver+=Long.valueOf(c.toString());
-				counter += 1;
+				
 			}
 			break;
 			
@@ -60,7 +60,7 @@ switch(key.toString().split("#")[1]) {
 			}
 			break;
 		}
-		
+	
 	
 	}
 	
@@ -72,7 +72,7 @@ switch(key.toString().split("#")[1]) {
 		context.write(new Text(lable+"-Max"), new LongWritable(Max));
 		context.write(new Text(lable+"-Min"), new LongWritable(Min));
 		context.write(new Text(lable+"-Sum"), new LongWritable(Sum));
-		//context.write(new Text(lable+"Aver"), new LongWritable(Aver/counter));
+		context.write(new Text(lable+"-Aver"), new LongWritable(Aver/counter));
 		//context.write(new Text("initCounter"), new LongWritable(counter));
 	}
 	

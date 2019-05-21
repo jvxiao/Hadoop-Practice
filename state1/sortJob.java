@@ -30,7 +30,7 @@ public class sortJob {
 	//	job.setCombinerClass(Combiner1.class);
 		job.setNumReduceTasks(1);
 		FileInputFormat.addInputPath(job, new Path("testData/3numberFiles/"));
-		FileOutputFormat.setOutputPath(job, new Path("testData/output/out09"));
+		FileOutputFormat.setOutputPath(job, new Path("testData/output/out36"));
 		job.waitForCompletion(true);
 		long end=System.currentTimeMillis();
 		System.out.println("Finish in "+ (end-start)+"ms");

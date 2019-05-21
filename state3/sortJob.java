@@ -31,7 +31,7 @@ public class sortJob {
 		job.setPartitionerClass(Partitioner1.class);
 		job.setNumReduceTasks(3);
 		FileInputFormat.addInputPath(job, new Path("testData/3numberFiles/"));
-		FileOutputFormat.setOutputPath(job, new Path("testData/output/out29"));
+		FileOutputFormat.setOutputPath(job, new Path("testData/output/out37"));
 		job.waitForCompletion(true);
 		long end=System.currentTimeMillis();
 		System.out.println("Finish in "+ (end-start)+"ms");
